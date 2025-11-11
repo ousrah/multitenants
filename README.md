@@ -104,7 +104,7 @@ This project was developed and is maintained by:
 
 *   **Name**: Rahmouni Oussama
 *   **Title**: Trainer in Software Development & Data Science, ISMO
-*   **Email**: [ousrah@gmail.com](mailto:ousrah@gmail.com)
+*   **Email**: [ousrah@hotmail.com](mailto:ousrah@hotmail.com)
 *   **Phone**: +212 6 12 96 24 66
 
 Feel free to reach out with any questions or for collaboration opportunities.
