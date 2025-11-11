@@ -1,9 +1,21 @@
-# Laravel 12 Multi-Tenant Demo Application
+# Laravel 12 Multi-Tenant, Multi-Module & Multi-Theme SaaS Boilerplate
 
-This project is an open-source demo application that illustrates how to build a robust SaaS (Software as a Service) application with Laravel 12. It implements a multi-tenant architecture where each client (tenant) has their own isolated database while sharing a single codebase.
+This project is an advanced, open-source boilerplate demonstrating a comprehensive architecture for building scalable SaaS (Software as a Service) applications with Laravel 12.
+
+Beyond standard multi-tenancy, this application is built on **three core pillars**:
+
+1.  **🏢 Multi-Tenant Foundation**: Each client (tenant) operates with a completely isolated database, ensuring data privacy and security, all managed from a central application. (*Powered by `stancl/tenancy`*)
+
+2.  **📦 Multi-Module Architecture**: The backend is organized into independent modules (e.g., `School`, `Billing`). This approach ensures superior maintainability and scalability, allowing development teams to work on features in isolation and keeping the core application lean. (*Implemented with `nwidart/laravel-modules`*)
+
+3.  **🎨 Multi-Theme System**: Offer true customization to your clients. Each tenant can have a unique visual identity with a dynamic theming system that loads tenant-specific Blade views, components, and assets (CSS/JS) compiled with Vite.
+
+This powerful combination provides a solid foundation for any ambitious SaaS project.
 
 This repository serves as a practical companion to the full course available here:
-**[▶️ Follow the detailed course on ousrah.portal-edu.com](https://ousrah.portal-edu.com/multitenants)**
+**[▶️ Follow the detailed course on https://ousrah.portal-edu.com/multitenants](https://ousrah.portal-edu.com/multitenants)**
+
+
 
 ---
 
