@@ -92,7 +92,7 @@ This repository serves as a practical companion to the full course available her
 
 7.  **Start the server**
     ```bash
-    php artisan serve
+    php artisan serve --host=0.0.0.0 --port=8000
     ```
     You can now access the central application at `http://central.manar.com:8000`.
 
