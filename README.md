@@ -13,7 +13,7 @@ Beyond standard multi-tenancy, this application is built on **three core pillars
 This powerful combination provides a solid foundation for any ambitious SaaS project.
 
 This repository serves as a practical companion to the full course available here:
-**[▶️ Follow the detailed course on https://ousrah.portal-edu.com/multitenants](https://ousrah.portal-edu.com/multitenants)**
+**[▶️ Follow the detailed course on https://ousrah.portal-edu.com/multitenants](https://ousrah.portal-edu.com/multitenants?lang=en)**
 
 
 
