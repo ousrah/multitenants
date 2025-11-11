@@ -1,0 +1,92 @@
+/* resources/css/rtl-layout-fixes.css */
+
+/*
+================================================================
+  CORRECTIONS CIBLÉES POUR LA MISE EN PAGE EN RTL
+================================================================
+*/
+
+/* --- 1. Positionnement de base des sidebars de gauche --- */
+[dir="rtl"] .main-sidebar,
+[dir="rtl"] .sidebar-panel {
+    right: 0;
+    left: auto;
+}
+/* Inversion du padding pour le panneau */
+[dir="rtl"] .sidebar-panel .pl-\[var\(--main-sidebar-width\)\] {
+    padding-left: 0;
+    padding-right: var(--main-sidebar-width);
+}
+
+/* --- 2. Gestion de la transformation (cacher/montrer) --- */
+[dir="rtl"] .main-sidebar,
+[dir="rtl"] .sidebar-panel {
+    /* Cache les sidebars sur la droite par défaut */
+    transform: translateX(100%);
+}
+/* Affiche les sidebars quand la classe est présente */
+[dir="rtl"].is-sidebar-open .main-sidebar,
+[dir="rtl"].is-sidebar-open .sidebar-panel {
+    transform: translateX(0);
+}
+
+
+/* --- 3. Positionnement de la "Right Sidebar" (qui va à gauche) --- */
+[dir="rtl"] div[x-show*="isRightSidebarExpanded"] > .fixed.right-0 {
+    right: auto;
+    left: 0;
+}
+/* Correction de l'animation de la Right Sidebar */
+[dir="rtl"] .fixed.right-0 + .fixed.right-0 .transform-gpu[x-transition\:enter-start="translate-x-full"] {
+    --tw-translate-x: -100%;
+}
+[dir="rtl"] .fixed.right-0 + .fixed.right-0 .transform-gpu[x-transition\:leave-end="translate-x-full"] {
+    --tw-translate-x: -100%;
+}
+
+
+/* --- 4. Ajustement du Header et du Main Content --- */
+[dir="rtl"] nav.header {
+    right: auto;
+    left: 0;
+}
+[dir="rtl"] .main-content {
+    margin-left: 0;
+}
+[dir="rtl"] .header-container {
+    flex-direction: row-reverse;
+}
+
+/* =================================================================
+   Règles responsives avec @media queries
+================================================================= */
+
+/* Pour les écrans 'md' et plus (min-width: 768px) */
+@media (min-width: 768px) {
+    [dir="rtl"] .main-sidebar {
+        /* La barre d'icônes est toujours visible sur desktop */
+        transform: translateX(0);
+    }
+    [dir="rtl"] .main-content {
+        margin-right: var(--main-sidebar-width);
+    }
+    [dir="rtl"] nav.header {
+        width: calc(100% - var(--main-sidebar-width));
+    }
+    [dir="rtl"].has-min-sidebar .main-content {
+        margin-right: calc(var(--main-sidebar-width) + var(--sidebar-panel-min-width));
+    }
+    [dir="rtl"].has-min-sidebar nav.header {
+        width: calc(100% - (var(--main-sidebar-width) + var(--sidebar-panel-min-width)));
+    }
+}
+
+/* Pour les écrans 'xl' et plus (min-width: 1280px) */
+@media (min-width: 1280px) {
+    [dir="rtl"].is-sidebar-open .main-content {
+        margin-right: calc(var(--main-sidebar-width) + var(--sidebar-panel-width));
+    }
+    [dir="rtl"].is-sidebar-open nav.header {
+        width: calc(100% - (var(--main-sidebar-width) + var(--sidebar-panel-width)));
+    }
+}

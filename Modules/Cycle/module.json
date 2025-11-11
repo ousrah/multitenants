@@ -1,0 +1,11 @@
+{
+    "name": "Cycle",
+    "alias": "cycle",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Cycle\\Providers\\CycleServiceProvider"
+    ],
+    "files": []
+}

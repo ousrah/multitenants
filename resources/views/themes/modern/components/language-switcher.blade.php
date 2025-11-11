@@ -1,0 +1,1 @@
+@include('components.app-partials.language-switcher')
